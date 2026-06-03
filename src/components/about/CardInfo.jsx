@@ -1,18 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 import TypingText from './TypingText'
-import CardTags from './CardTags.jsx'
+import CardTags from './CardTags'
 
 export default function CardInfo() {
   const ref = useRef(null)
   const [started, setStarted] = useState(false)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setStarted(true) },
-      { threshold: 0.2 }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
+    // start typing immediately on mount
+    const t = setTimeout(() => setStarted(true), 500)
+    return () => clearTimeout(t)
   }, [])
 
   return (
@@ -23,7 +20,6 @@ export default function CardInfo() {
         justifyContent: 'center', padding: '44px 48px 44px 0',
       }}
     >
-      {/* Admin info label */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
         <div style={{
           width: 7, height: 7, borderRadius: '50%',

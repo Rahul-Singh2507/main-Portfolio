@@ -1,0 +1,64 @@
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 28px 0;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.contact-row:hover {
+  transform: translateX(8px);
+}
+
+.contact-label {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+
+  color: #e8ebe6;
+
+  letter-spacing: 0.04em;
+}
+
+.contact-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-value {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+}
+
+.contact-arrow {
+  color: #39ff14;
+  font-size: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.contact-row:hover .contact-arrow {
+  transform: translateX(6px);
+}

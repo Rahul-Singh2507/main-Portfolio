@@ -12,33 +12,11 @@ import Footer from './components/Footer'
 import Cursor from './components/Cursor'
 
 
-gsap.registerPlugin(ScrollTrigger)
 
 export default function App() {
-  useEffect(() => {
-    setTimeout(() => {
-      document.querySelectorAll('[data-section]').forEach((el) => {
-        gsap.fromTo(el,
-          { y: 80, opacity: 0, scale: 0.97 },
-          {
-            y: 0, opacity: 1, scale: 1,
-            duration: 1.2,
-            ease: 'power4.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none reverse',
-            }
-          }
-        )
-      })
-    }, 300)
-
-    return () => ScrollTrigger.getAll().forEach(t => t.kill())
-  }, [])
 
   return (
-    <div style={{ background: '#0a0a0a', color: '#fff', overflowX: 'hidden' }}>
+    <div>
       <Cursor />
       <Navbar />
       <Hero />
