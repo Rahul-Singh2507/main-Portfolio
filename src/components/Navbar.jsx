@@ -4,7 +4,6 @@ import gsap from "gsap"
 const links = [
   { name: "WORK", href: "#work" },
   { name: "ABOUT", href: "#about" },
-  { name: "LABS", href: "#labs" },
   { name: "CONTACT", href: "#contact" },
 ]
 
