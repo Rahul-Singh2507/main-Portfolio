@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
-
+import {Link} from "react-router-dom"
 const links = [
   { name: "WORK", href: "#work" },
   { name: "ABOUT", href: "#about" },
@@ -38,27 +38,28 @@ function Navbar() {
 
       {/* LINKS */}
       <div className="flex gap-10">
-        {links.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            className="relative text-xs text-neutral-500 tracking-widest hover:text-[#39FF14] transition-colors duration-300 group"
-          >
-            {item.name}
-
-            {/* UNDERLINE */}
-            <span className="absolute left-0 -bottom-1 h-px w-0 bg-[#39FF14] transition-all duration-300 group-hover:w-full"></span>
-          </a>
+        { links.map((item) => (
+          <Link
+  key={item.name}
+  to="#"
+  onClick={() =>
+    document
+      .querySelector(item.href)
+      ?.scrollIntoView({ behavior: "smooth" })
+  }
+>
+  {item.name}
+</Link>
         ))}
       </div>
 
       {/* CTA */}
-      <a
-        href="#"
+      <Link
+        to="#"
         className="text-xs text-[#39FF14] tracking-widest border border-[#39FF14] px-4 py-2 hover:bg-[#39FF14] hover:text-[#0a0a0a] transition-all duration-300"
       >
         DOWNLOAD_CV
-      </a>
+      </Link>
     </nav>
   )
 }

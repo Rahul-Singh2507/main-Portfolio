@@ -84,6 +84,7 @@ export default function Projects() {
 
   return (
     <div
+    id="work"
       ref={sectionRef}
       style={{
         fontFamily:
