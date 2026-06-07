@@ -19,7 +19,7 @@ function Navbar() {
         opacity: 1,
         duration: 0.4,
         ease: "power2.out",
-        clearProps: "transform", // 🔥 fixes top gap issue
+        clearProps: "transform", 
       }
     )
   }, [])
@@ -32,16 +32,27 @@ function Navbar() {
       style={{ fontFamily: "DM Mono, monospace" }}
     >
       {/* LOGO */}
-      <div className="text-white text-sm tracking-[0.2em]">
+      <div className="text-[#39FF14] text-sm tracking-[0.2em]">
         RAHUL_SINGH
       </div>
 
       {/* LINKS */}
-      <div className="flex gap-10">
+      <div className="flex gap-10 text-white text-xs tracking-[0.15em]">
         { links.map((item) => (
           <Link
   key={item.name}
   to="#"
+   className="relative text-white
+             after:content-['']
+             after:absolute
+             after:left-0
+             after:-bottom-1
+             after:w-0
+             after:h-[2px]
+             after:bg-[#39FF14]
+             after:transition-all
+             after:duration-300
+             hover:after:w-full"
   onClick={() =>
     document
       .querySelector(item.href)
