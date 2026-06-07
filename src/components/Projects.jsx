@@ -12,7 +12,10 @@ import ProjectHeader from "./projects/ProjectHeader";
 import ProjectCarousel from "./projects/ProjectCarousel";
 import ProjectControls from "./projects/ProjectControls";
 import ProjectModal from "./projects/ProjectModal";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 import "./projects/projectStyles.css";
 
 const CARD_W = 680;
@@ -34,9 +37,26 @@ export default function Projects() {
   const scrollLocked = useRef(false);
 
   const sectionRef = useRef(null);
+  
+const inView = useProjectInView(sectionRef, 0.1);
 
-  const inView =
-    useProjectInView(sectionRef, 0.1);
+useEffect(() => {
+  const ctx = gsap.context(() => {
+    gsap.from(sectionRef.current, {
+      opacity: 0,
+      y: 100,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, sectionRef);
+
+  return () => ctx.revert();
+}, []);
 
   useEffect(() => {
     const loop = () => {
