@@ -7,8 +7,8 @@ gsap.registerPlugin(ScrollTrigger)
 const SKILLS = {
   FRONTEND: ['REACT', 'JAVASCRIPT', 'HTML5', 'CSS3', 'TAILWIND', 'GSAP', 'REDUX'],
   BACKEND: ['NODE.JS', 'EXPRESS.JS', 'REST API', 'JWT', 'SOCKET.IO', 'MONGOOSE'],
-  DATABASE: ['MONGODB', 'MONGOOSE', 'REDIS', 'FIREBASE', 'SUPABASE'],
-  AI: ['LANGCHAIN', 'OPENAI API', 'GEMINI', 'RAG', 'VECTOR DB', 'PROMPT ENG', 'HUGGINGFACE'],
+  DATABASE: ['MONGODB', 'MONGOOSE', 'REDIS', 'PINECONE', ],
+  AI: ['LANGCHAIN', 'OPENAI API', 'GEMINI', 'RAG', 'VECTOR DB', 'PROMPT ENG',],
   DEVOPS: ['DOCKER', 'AWS EC2', 'AWS S3', 'CI/CD', 'GITHUB ACTIONS', 'NGINX', 'LINUX'],
   TOOLS: ['GIT', 'GITHUB', 'FIGMA', 'POSTMAN', 'VS CODE', 'VERCEL'],
 }
@@ -252,6 +252,15 @@ export default function Skills() {
           </div>
         </div>
 
+
+   <div ref={(el) => (panelsRef.current[4] = el)}
+          style={panelStyle({ borderTop: '1px solid #1a1a1a', borderRight: '1px solid #1a1a1a' })}>
+          <span style={{ position: 'absolute', top: 10, right: 14, fontSize: 9, color: '#2a2a2a', letterSpacing: 2 }}>05</span>
+          <p style={{ fontSize: 9, letterSpacing: '0.3em', color: TAG_COLORS.TOOLS.color, margin: '0 0 18px' }}>TOOLS</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7 }}>
+            {SKILLS.TOOLS.map((s) => <Tag key={s} label={s} color={TAG_COLORS.TOOLS} />)}
+          </div>
+        </div>
         {/* 06 Proficiency */}
         <div ref={(el) => (panelsRef.current[5] = el)}
           style={panelStyle({ borderTop: '1px solid #1a1a1a' })}>
