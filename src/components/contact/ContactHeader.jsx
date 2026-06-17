@@ -27,7 +27,7 @@ export default function ContactHeader() {
           letterSpacing: "-0.04em",
         }}
       >
-        ESTABLISH_LINK
+        CONNNECT WITH ME
         <span className="cursor">_</span>
       </h2>
 
