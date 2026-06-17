@@ -144,20 +144,23 @@ export default function ProjectModal({
               gap: 12,
             }}
           >
-            <button
-              className="view-btn"
-              style={{
-                flex: 1,
-              }}
-            >
-              VIEW LIVE ↗
-            </button>
+      <a      
+    href={modal.liveUrl}
+    target="_blank"
+    rel="noreferrer"
+    onClick={(e) => e.stopPropagation()}
+    className="view-btn"
+    style={{ flex: 1, textAlign: "center", textDecoration: "none", display: "block" }}
+>
+    VIEW LIVE ↗
+</a>
 
             <button
               className="view-btn"
               style={{
                 flex: 1,
               }}
+             onClick={() => window.open(modal.sourceUrl, "_blank")}
             >
               SOURCE CODE ↗
             </button>

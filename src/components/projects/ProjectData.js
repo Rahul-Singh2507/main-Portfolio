@@ -1,26 +1,26 @@
 export const PROJECTS = [
-  {
+ {
     id: "01",
-    title: "SYS_KERNEL",
-    subtitle:
-      "Cinematic interaction-focused interface system with futuristic layered transitions.",
-    description:
-      "A full-stack OS-inspired interface built with Next.js and GSAP.",
+    title: "OMNI",
+    subtitle: "AI-powered real-time chat application with smart conversations.",
+    description: "A full-stack chat app built with React, Node.js, and Socket.io featuring AI responses via Mistral API.",
     tags: [
-      "NEXT.JS",
-      "GSAP",
-      "WEBSOCKET",
-      "TAILWIND",
-      "VERCEL",
+        "REACT",
+        "NODE.JS",
+        "SOCKET.IO",
+        "MONGODB",
+        "MISTRAL AI",
     ],
-    accent: "#39ff14",
-    bg: "linear-gradient(135deg,#0f1117 0%,#1a1d2e 100%)",
-    year: "2024",
+    accent: "#00c9ff",
+    bg: "linear-gradient(135deg,#0a0f1e 0%,#0d1f3c 100%)",
+    year: "2026",
     role: "Full-Stack Dev",
-    code: `const kernel = init();
-kernel.boot({ mode: 'silent' });
-await kernel.mount('/sys');`,
-  },
+    code: `const omni = init();
+omni.boot({ mode: 'chat' });
+await omni.connect('/ai');`,
+liveUrl: "https://omni-nu.vercel.app",       
+sourceUrl: "https://github.com/Rahul-Singh2507/Omni", 
+},
 
   {
     id: "02",
