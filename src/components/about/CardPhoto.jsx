@@ -15,7 +15,7 @@ export default function CardPhoto() {
 
         {/* YOUR PHOTO */}
         <img
-          src="../../../public/profile.png"
+          src="/profile.png"
           alt="profile"
           style={{
             width: '100%',

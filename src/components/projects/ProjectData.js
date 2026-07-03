@@ -22,29 +22,41 @@ liveUrl: "https://omni-nu.vercel.app",
 sourceUrl: "https://github.com/Rahul-Singh2507/Omni", 
 },
 
-  {
-    id: "02",
-    title: "KRYPT_OS",
-    subtitle:
-      "Encrypted OS-level dashboard with real-time data streams.",
-    description:
-      "End-to-end encrypted dashboard built with React and Node.",
-    tags: [
-      "REACT",
-      "NODE.JS",
-      "POSTGRESQL",
-      "AES-256",
-      "SSE",
-    ],
-    accent: "#00ffcc",
-    bg: "linear-gradient(135deg,#0d1a0f 0%,#111e12 100%)",
-    year: "2024",
-    role: "Security Engineer",
-    code: `import { encrypt } from 'krypt';
-const vault = new Vault(key);
-await vault.seal(payload);`,
-  },
+{
+  id: "02",
+  title: "RESUME_ANALYZER",
+  subtitle:
+    "AI resume analyzer powered by LangChain-style AI workflows.",
+  description:
+    "AI-driven interview preparation platform that parses resumes, analyzes candidate profiles, and generates personalized interview strategies using LLM pipelines with structured AI responses.",
+  tags: [
+    "REACT",
+    "NODE.JS",
+    "EXPRESS",
+    "MONGODB",
+    "GOOGLE GENAI",
+    "LANGCHAIN",
+    "ZOD",
+    "JWT",
+    "PDF PARSER"
+  ],
+  accent: "#ff4d8d",
+  bg: "linear-gradient(135deg,#140014 0%,#071526 100%)",
+  year: "2026",
+  role: "Full Stack AI Developer",
 
+  code: `const schema = zodToJsonSchema(strategySchema);
+
+const response = await ai.models.generateContent({
+  model,
+  contents: resumeData
+});
+
+return interviewStrategy;`,
+
+  liveUrl: "https://resume-analyzer-blush-iota.vercel.app",
+  sourceUrl: "https://github.com/Rahul-Singh2507/Resume-analyzer",
+},
   {
     id: "03",
     title: "DATA_SPHERE",
