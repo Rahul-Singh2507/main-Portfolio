@@ -22,7 +22,7 @@ const LINKS = [
   {
     label: "LINKEDIN",
     value: "linkedin.com/in/rahul",
-    href: "#",
+    href: "https://www.linkedin.com/in/rahul-singh-34611223a",
     icon: <FaLinkedin />,
   },
   {
