@@ -57,26 +57,35 @@ return interviewStrategy;`,
   liveUrl: "https://resume-analyzer-blush-iota.vercel.app",
   sourceUrl: "https://github.com/Rahul-Singh2507/Resume-analyzer",
 },
-  {
-    id: "03",
-    title: "DATA_SPHERE",
-    subtitle:
-      "Gen AI-powered analytics sphere with live insights.",
-    description:
-      "Multi-agent AI analytics system with vector search.",
-    tags: [
-      "LANGCHAIN",
-      "GPT-4O",
-      "PINECONE",
-      "D3.JS",
-      "PYTHON",
-    ],
-    accent: "#a78bfa",
-    bg: "linear-gradient(135deg,#111118 0%,#1c1a2e 100%)",
-    year: "2025",
-    role: "AI Engineer",
-    code: `const sphere = DataSphere.init();
-sphere.ingest(stream,{live:true});
-console.log(sphere.nodes);`,
-  },
+{
+  id: "03",
+  title: "SNITCH",
+  subtitle:
+    "Full-stack e-commerce platform with secure payments.",
+  description:
+    "Production-ready MERN stack shopping platform featuring user authentication, product catalog, cart management, image uploads, Razorpay payment integration, and scalable REST APIs.",
+  tags: [
+    "REACT",
+    "NODE.JS",
+    "EXPRESS",
+    "MONGODB",
+    "REDUX",
+    "RAZORPAY",
+    "JWT",
+    "MULTER",
+    "TAILWINDCSS",
+  ],
+  accent: "#f5a524",
+  bg: "linear-gradient(135deg,#1a1205 0%,#2b1d0e 100%)",
+  year: "2026",
+  role: "Full Stack Developer",
+  code: `const cart = addToCart(product);
+
+const order = await createOrder({
+  amount,
+  payment: "razorpay"
+});
+
+await checkout(order);`,
+},
 ];
