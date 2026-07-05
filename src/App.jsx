@@ -9,7 +9,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Cursor from './components/Cursor'
+import Cursor from './components/Cursor.jsx'
 
 
 
