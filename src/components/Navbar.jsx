@@ -65,12 +65,13 @@ function Navbar() {
       </div>
 
       {/* CTA */}
-      <Link
-        to="#"
-        className="text-xs text-[#39FF14] tracking-widest border border-[#39FF14] px-4 py-2 hover:bg-[#39FF14] hover:text-[#0a0a0a] transition-all duration-300"
-      >
-        DOWNLOAD_CV
-      </Link>
+     <a
+  href="/Rahul_Singh_CV.pdf"
+  download="Rahul_Singh_CV.pdf"
+  className="text-xs text-[#39FF14] tracking-widest border border-[#39FF14] px-4 py-2 hover:bg-[#39FF14] hover:text-black transition-all duration-300"
+>
+  DOWNLOAD_CV
+</a>
     </nav>
   )
 }
